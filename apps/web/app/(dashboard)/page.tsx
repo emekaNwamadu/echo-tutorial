@@ -32,8 +32,8 @@ export default function Page() {
           <Input />
         </div>
       </div>
-      <p>Must be signed in !</p>
-      <SignInButton>Sign in</SignInButton>
+      {/* <p>Must be signed in !</p>
+      <SignInButton>Sign in</SignInButton> */}
     </>
   );
 }

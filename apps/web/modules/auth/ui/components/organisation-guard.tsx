@@ -11,7 +11,7 @@ export const OrganizationGuard = ({
 }) => {
   const organization = useOrganization();
 
-  if (!organization) {
+  if (!organization.organization) {
     return (
       <AuthLayout>
         <OrgSelectionView />
