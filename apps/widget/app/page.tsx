@@ -1,6 +1,6 @@
 "use client";
 
-import { UseVapi } from "@/modules/widget/hooks/use-vapi";
+import { useVapi } from "@/modules/widget/hooks/use-vapi";
 import Vapi from "@vapi-ai/web";
 import { Button } from "@workspace/ui/components/button";
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
     transcript,
     startCall,
     endCall,
-  } = UseVapi();
+  } = useVapi();
 
   return (
     <div className="flex flex-col items-center justify-center min-h-svh max-w-md mx-auto w-full">
