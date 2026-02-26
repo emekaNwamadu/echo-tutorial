@@ -7,12 +7,12 @@ interface TranscriptMessage{
 
 }
 
-export const UseVapi = () => {
+export const useVapi = () => {
     const [vapi,setVapi] = useState<Vapi | null >(null);
     const [isConnected,setIsConnected] = useState(false);
     const [isConnecting,setIsConnecting] = useState(false);
     const [isSpeaking,setIsSpeaking] = useState(false);
-    const [transcript,setTransript] = useState<TranscriptMessage[]>([]);
+    const [transcript,setTranscript] = useState<TranscriptMessage[]>([]);
 
     useEffect(() => {
         //Public api key
@@ -22,7 +22,7 @@ export const UseVapi = () => {
         vapiInstance.on("call-start" , () => {
             setIsConnected(true);
             setIsConnecting(false);
-            setTransript([]);
+            setTranscript([]);
         } )
 
         vapiInstance.on("call-end" , () => {
@@ -52,7 +52,7 @@ export const UseVapi = () => {
 
          vapiInstance.on("message" , (message) => {
             if (message.type === "transcript" && message.transcriptType ==="final") {
-                setTransript((prev) =>[
+                setTranscript((prev) =>[
                     ...prev,
                     {
                         role:message.role ==="user" ? "user":"assistant",
