@@ -6,6 +6,7 @@ import { useQuery, Authenticated, Unauthenticated } from "convex/react";
 // import { api } from "../../../packages/backend/convex/_generated/api";
 // import { api } from "@workspace/backend/convex/_generated/api";
 // import { api } from "@workspace/backend/convex/_generated/api";
+// import { api } from "@workspace/backend/_generated/api";
 import { api } from "@workspace/backend/_generated/api";
 import {
   OrganizationSwitcher,
