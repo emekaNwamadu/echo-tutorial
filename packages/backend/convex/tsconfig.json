@@ -18,7 +18,11 @@
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+
+    /* Solution to node finding public.organizations:validate
+   */
+    "types": ["node"]
   },
   "include": ["./**/*"],
   "exclude": ["./_generated"]
