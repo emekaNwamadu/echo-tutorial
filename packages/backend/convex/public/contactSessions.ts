@@ -64,7 +64,7 @@ export const validate = mutation({
 			//    await ctx.db.delete(args.contactSessionId) // Optionally delete expired session
 			   return {valid: false, reason: "contact session expired"}
 		   }
-		   return {	valid: true, contactSession}
+		   return {	valid: true, contactSessionId: contactSession._id}
 	}
 
 })
